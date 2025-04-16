@@ -1,0 +1,155 @@
+/* Custom CSS for Pastry Chef Portfolio */
+
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #D2691E;
+    --accent-color: #FFE4C4;
+    --text-color: #2C1810;
+    --light-text: #FFF5EB;
+    --background-color: #FFF8DC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.site-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-pastry.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.hero-section h2 {
+    font-size: 4em;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Content Sections */
+.e-con-boxed {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 30px 0;
+    padding: 40px;
+}
+
+.elementor-heading-title {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    text-align: center;
+    margin: 20px 0 40px;
+}
+
+.elementor-widget-container {
+    padding: 20px;
+}
+
+.elementor-widget-container p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+/* Blockquote */
+.elementor-blockquote {
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 20px;
+    font-style: italic;
+    margin: 30px 0;
+}
+
+.elementor-blockquote__content {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1.2em;
+}
+
+ul li:before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+}
+
+/* Contact Section */
+.contact-section p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 20px;
+    }
+
+    .hero-section h2 {
+        font-size: 2.5em;
+    }
+
+    .elementor-heading-title {
+        font-size: 2em;
+    }
+
+    .e-con-boxed {
+        padding: 20px;
+    }
+}
+
+/* Animations */
+.elementor-widget-container {
+    transition: transform 0.3s ease;
+}
+
+.elementor-widget-container:hover {
+    transform: translateY(-5px);
+}
+
+.elementor-heading-title {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
